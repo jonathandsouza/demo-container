@@ -8,6 +8,11 @@ app.get('/items', (req, res, next) => {
 	res.json(["Tony", "Lisa", "Michael", "Ginger", "Food"]);
 });
 
+app.get('/jona', (req, res, next) => {
+	res.json(["test"]);
+});
+
+
 
 app.listen(8080, () => console.log('Listening on port 3000'));
 
