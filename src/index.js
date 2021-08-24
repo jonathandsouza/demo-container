@@ -12,7 +12,9 @@ app.get('/jona', (req, res, next) => {
 	res.json(["test"]);
 });
 
-
+app.get('/test', (req, res, next) => {
+	res.json(["jona"]);
+});
 
 app.listen(8080, () => console.log('Listening on port 3000'));
 
