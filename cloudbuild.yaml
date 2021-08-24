@@ -3,5 +3,5 @@ steps:
   args: ['build', '-t', 'gcr.io/jona-container-project/github.com/jonathandsouza/demo-container:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/jona-container-project/github.com/jonathandsouza/demo-container:$SHORT_SHA']
-  
-  
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['gcloud','beta','deploy','demo-container-service','--region=us-central1', '--platform=managed', '--image=gcr.io/jona-container-project/github.com/jonathandsouza/demo-container:$SHORT_SHA']  
